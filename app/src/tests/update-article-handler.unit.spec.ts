@@ -112,6 +112,7 @@ describe('UpdateArticleHandler', () => {
 
     expect(result.isSuccess).toBe(true);
     expect(result.value).toEqual({
+      id: 'article-id',
       title: 'Updated',
       description: 'Updated desc',
       createdAt: '2023-01-01T00:00:00.000Z',

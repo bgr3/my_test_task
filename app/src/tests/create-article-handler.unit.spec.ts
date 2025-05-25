@@ -65,6 +65,7 @@ describe('CreateArticleHandler', () => {
       passwordHash: 'hashed-password',
     });
     const mockArticle = plainToInstance(Article, {
+      id: '56789',
       title: 'Test Article',
       description: 'Some description',
       createdAt: new Date('2023-01-01T00:00:00.000Z'),
@@ -80,6 +81,7 @@ describe('CreateArticleHandler', () => {
 
     expect(result.isSuccess).toBe(true);
     expect(result.value).toEqual({
+      id: '56789',
       title: 'Test Article',
       description: 'Some description',
       createdAt: '2023-01-01T00:00:00.000Z',
